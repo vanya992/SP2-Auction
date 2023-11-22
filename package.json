@@ -1,0 +1,21 @@
+{
+  "name": "sp2-auction",
+  "version": "1.0.0",
+  "description": "Auction Site for Jewelry bids",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "java",
+    "script",
+    "bootstrap"
+  ],
+  "author": "Vladimira Dmitrovic <vanjacrv92@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^21.1.0"
+  }
+}
