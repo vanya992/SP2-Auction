@@ -11855,21 +11855,29 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  display: flex;
-  flex-direction: column;
+.background {
   background-image: url("../../images/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   background-position: center center;
-  margin: 0;
-  padding: 0;
 }
 
 .logo {
   width: 100px;
   height: auto;
+}
+
+.fa-bars {
+  font-size: 3em;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 5px;
+  background: rgba(1, 1, 1, 0.5);
 }
 
 .diamonds {
