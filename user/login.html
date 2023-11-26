@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jewelry Bids | Home</title>
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="src/scss/index.scss" />
+    <title>Jewelry Bids | Log in</title>
+    <link rel="stylesheet" href="../dist/css/index.css" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -28,7 +27,7 @@
     <header class="sticky-top">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="#"
-          ><img src="images/logo.png" alt="logo" class="logo"
+          ><img src="../images/logo.png" alt="logo" class="logo"
         /></a>
         <button
           class="navbar-toggler"
@@ -44,10 +43,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a
+                class="nav-link"
+                href="./index.
+  html"
+                >About Us</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a
+                class="nav-link"
+                href="./index.
+  html"
+                >Contact</a
+              >
             </li>
             <li class="nav-item">
               <a
@@ -79,21 +88,27 @@
       </nav>
     </header>
     <main>
-      <img src="images/diamonds.jpg" alt="diamonds" class="diamonds" />
-      <h1>
-        Exquisite Gems, <br />
-        Exclusive Bids
-      </h1>
-      <div>
-        <p>Newest auction items</p>
-      </div>
-      <div>
-        <p>Soon expiring</p>
-      </div>
-      <p>Want to make your own auction? Sign in here</p>
-      <h2>Explore our jewelry and find the best fit for you</h2>
+      <container class="d-flex flex-column justify-content-center m-auto">
+        <form class="form-control d-flex flex-column">
+          <h1>Sign in</h1>
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="example@stud.noroff.no"
+          />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Example12"
+            minlength="8"
+          />
+          <button class="btn btn-success m-2">Log In</button>
+        </form>
+      </container>
     </main>
-    <footer class="mt-auto">
+    <footer>
       <div>
         <p>About us</p>
         <p>Contact</p>
@@ -102,7 +117,7 @@
         <p>Register</p>
       </div>
       <div>
-        <img src="images/logo.png" alt="logo" class="logo-footer" />
+        <img src="../images/logo.png" alt="logo" class="logo-footer" />
       </div>
       <div>
         <h3>Buy</h3>
