@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jewelry Bids | Log in</title>
     <link rel="stylesheet" href="../dist/css/index.css" />
+    <link rel="stylesheet" href="../css/index.css">
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -22,12 +23,14 @@
       src="https://kit.fontawesome.com/f55b09a11a.js"
       crossorigin="anonymous"
     ></script>
+    <script defer type="module" src="../js/register.js"></script>
+    <script defer src="../js/nav.js"></script>
   </head>
   <body class="d-flex flex-column vh-100">
     <header class="sticky-top">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="../index.html"
-          ><img src="../images/logo.png" alt="logo" class="logo"
+          ><img src="../images/justlogo.png" alt="logo" class="logo"
         /></a>
         <button
           class="navbar-toggler"
@@ -43,28 +46,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="./index.
-  html"
-                >About Us</a
+              <a class="nav-link"
+                href="../listings/index.html"
+                >Listings</a
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="./index.
-  html"
-                >Contact</a
-              >
+              <a class="nav-link" id="createListing" href="../listings/createBid.html">Create listing</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="../profile/index.
-  html"
-                >Profile</a
-              >
+              <a class="nav-link" id="logIn" href="./login.html">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="register" href="./register.html">Register</a>
+            </li>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="logOut">Log Out</a>
@@ -89,15 +84,22 @@
     </header>
     <main>
       <container>
-        <form class="form-control d-flex flex-column">
+        <form class="form-control d-flex flex-column" id="registerForm">
           <h1>Register</h1>
           <label for="name">Name</label>
-          <input type="text" name="name" placeholder="Name" required />
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            id="user"
+            required
+          />
           <label for="email">E-mail</label>
           <input
             type="email"
             name="email"
             placeholder="example@stud.noroff.no"
+            id="email"
             required
           />
           <label for="password">Password</label>
@@ -106,6 +108,7 @@
             name="password"
             placeholder="Example12"
             minlength="8"
+            id="password"
             required
           />
           <label for="avatar">Avatar</label>
@@ -114,25 +117,30 @@
         </form>
       </container>
     </main>
-    <footer>
+    <footer class="mt-auto">
+      <section>
       <div>
-        <p>About us</p>
-        <p>Contact</p>
-        <p>Help</p>
-        <p>Log in</p>
-        <p>Register</p>
+        <h5>Jewelry Bids</h5>
+        <p>
+          Our customers trust is our most valuable asset, and we strive to
+          maintain it by providing exceptional customer service and expert
+          advice.
+        </p>
       </div>
       <div>
-        <img src="../images/logo.png" alt="logo" class="logo-footer" />
+        <h5>Navigation</h5>
+        <p><a href="index.html">Listings</a></p>
+        <p><a href="createBid.html">Create a listing</a></p>
       </div>
       <div>
-        <h3>Buy</h3>
-        <p>How to bid</p>
-        <p>Buyer Terms</p>
-
-        <h3>Sell</h3>
-        <p>How to sell</p>
-        <p>Seller Terms</p>
+        <h5>Contact us</h5>
+        <p><i class="fa-solid fa-envelope">customerservice@jewelrybids.com</i></p>
+        <p>Fast response guaranteed</p>
+      </section>
+      <section >
+        <hr></hr>
+        <p class="under-footer"> Jewelry Bids &#169; All rights reserved 2023 </p>
+      </section>
       </div>
     </footer>
   </body>

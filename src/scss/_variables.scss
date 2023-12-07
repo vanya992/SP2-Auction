@@ -1,0 +1,15 @@
+:root {
+    --bs-green: #2d403e;
+    --bs-primary-rgb: 13, 110, 253;
+}
+
+
+.text-bg-primary {
+    color: #82752a;
+    background-color: RGBA(var(--bs-primary-rgb), var(--bs-bg-opacity, 1)) ;
+  }
+
+  .row {
+    --bs-gutter-x: 0;
+   
+  }

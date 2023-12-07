@@ -3,40 +3,148 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jewelry Bids | Bid</title>
+    <title>Jewelry Bids | Create Listing</title>
     <link rel="stylesheet" href="../dist/css/index.css" />
+    <link rel="stylesheet" href="../css/index.css" />
     <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
       src="https://kit.fontawesome.com/f55b09a11a.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="../js/nav.js"></script>
+    <script defer type="module" src="../js/createListing.js"></script>
   </head>
-  <body>
-    <header>
-      <div class="nav">
-        <img src="../images/logo.png" alt="logo" class="logo" />
-        <i class="fa-solid fa-bars"></i>
-      </div>
-    </header>
-    <main></main>
-    <footer>
-      <div>
-        <p>About us</p>
-        <p>Contact</p>
-        <p>Help</p>
-        <p>Log in</p>
-        <p>Register</p>
-      </div>
-      <div>
-        <img src="../images/logo.png" alt="logo" class="logo-footer" />
-      </div>
-      <div>
-        <h3>Buy</h3>
-        <p>How to bid</p>
-        <p>Buyer Terms</p>
+  <body class="d-flex flex-column vh-100">
+    <header class="sticky-top navigation">
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html"
+          ><img src="../images/justlogo.png" alt="logo" class="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Listings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="createListing">Create Listing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="logIn">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="register">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="logOut">Log Out</a>
+            </li>
+          </ul>
 
-        <h3>Sell</h3>
-        <p>How to sell</p>
-        <p>Seller Terms</p>
+          <div class="d-md-block">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                <i class="fa-solid fa-magnifying-glass fa-shake"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <form class="form-control d-flex flex-column p-4 m-5" id="listingForm">
+              <h1 class="text-center">Create a listing</h1>
+              <label for="title">Title</label>
+              <input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Title"
+                class="mb-2"
+                required
+              />
+              <label for="end">Auctions end date</label>
+              <input
+                type="date"
+                id="end"
+                name="end"
+                min="2023-12-01"
+                max="2024-12-31"
+                class="mb-2" required
+              />
+              <label for="media">Media</label>
+              <div>
+                <input
+                  type="url"
+                  id="media"
+                  name="image"
+                  placeholder="Add an image of your bidding item"
+                  class="mb-2"
+                />
+                <button>Add more</button>
+              </div>
+              <label for="tag">Tags</label>
+              <input type="tag" id="tag" name="tag" data-role="taginput" placeholder="Tag">
+              <label>Description</label>
+              <textarea placeholder="Say something about your item" id="description"></textarea>
+              <button class="btn btn-outline-success m-2">Post item</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mt-auto">
+      <section>
+      <div>
+        <h5>Jewelry Bids</h5>
+        <p>
+          Our customers trust is our most valuable asset, and we strive to
+          maintain it by providing exceptional customer service and expert
+          advice.
+        </p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <p><a href="index.html">Listings</a></p>
+        <p><a href="createBid.html">Create a listing</a></p>
+      </div>
+      <div>
+        <h5>Contact us</h5>
+        <p><i class="fa-solid fa-envelope">customerservice@jewelrybids.com</i></p>
+        <p>Fast response guaranteed</p>
+      </section>
+        <hr></hr>
+        <p class="under-footer"> Jewelry Bids &#169; All rights reserved 2023 </p>
       </div>
     </footer>
   </body>

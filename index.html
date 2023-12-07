@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jewelry Bids | Home</title>
-    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="src/scss/index.scss" />
+    <link rel="stylesheet" href="css/index.css" />
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -23,12 +24,14 @@
       src="https://kit.fontawesome.com/f55b09a11a.js"
       crossorigin="anonymous"
     ></script>
+    <script defer type="module" src="./js/carousel.js"></script>
+    <script defer type="module" src="./js/nav.js"></script>
   </head>
   <body class="d-flex flex-column vh-100">
     <header class="sticky-top">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="#"
-          ><img src="images/logo.png" alt="logo" class="logo"
+          ><img src="images/justlogo.png" alt="logo" class="logo"
         /></a>
         <button
           class="navbar-toggler"
@@ -44,17 +47,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="./listings/index.html">Listings</a>
             </li>
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="../profile/index.
-  html"
-                >Profile</a
+                id="createListing"
+                href="./listings/createBid.html"
+                >Create listing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="logIn" href="./user/login.html">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="register" href="./user/register.html"
+                >Register</a
               >
             </li>
             <li class="nav-item">
@@ -86,32 +94,59 @@
       </h1>
       <div>
         <p>Newest auction items</p>
+        <div class="wrapper">
+          <i id="left1" class="fa-solid fa-angle-left"></i>
+          <div class="carousel carousel-1">
+            <img src="images/jewelry.jpg" alt="jewelry" />
+            <img src="images/jewelry2.jpg" alt="jewelry" />
+            <img src="images/jewelry3.jpg" alt="jewelry" />
+            <img src="images/jewelry4.jpg" alt="jewelry" />
+            <img src="images/jewelry5 .jpg" alt="jewelry" />
+            <img src="images/jewelry6.jpg" alt="jewelry" />
+          </div>
+          <i id="right1" class="fa-solid fa-angle-right"></i>
+        </div>
       </div>
       <div>
         <p>Soon expiring</p>
+        <div class="wrapper">
+          <i id="left2" class="fa-solid fa-angle-left"></i>
+          <div class="carousel carousel-2">
+            <img src="images/jewelry.jpg" alt="jewelry" />
+            <img src="images/jewelry2.jpg" alt="jewelry" />
+            <img src="images/jewelry3.jpg" alt="jewelry" />
+            <img src="images/jewelry4.jpg" alt="jewelry" />
+            <img src="images/jewelry5 .jpg" alt="jewelry" />
+            <img src="images/jewelry6.jpg" alt="jewelry" />
+          </div>
+          <i id="right2" class="fa-solid fa-angle-right"></i>
+        </div>
       </div>
       <p>Want to make your own auction? Sign in here</p>
       <h2>Explore our jewelry and find the best fit for you</h2>
     </main>
     <footer class="mt-auto">
+      <section>
       <div>
-        <p>About us</p>
-        <p>Contact</p>
-        <p>Help</p>
-        <p>Log in</p>
-        <p>Register</p>
+        <h5>Jewelry Bids</h5>
+        <p>
+          Our customers trust is our most valuable asset, and we strive to
+          maintain it by providing exceptional customer service and expert
+          advice.
+        </p>
       </div>
       <div>
-        <img src="images/logo.png" alt="logo" class="logo-footer" />
+        <h5>Navigation</h5>
+        <p><a href="index.html">Listings</a></p>
+        <p><a href="createBid.html">Create a listing</a></p>
       </div>
       <div>
-        <h3>Buy</h3>
-        <p>How to bid</p>
-        <p>Buyer Terms</p>
-
-        <h3>Sell</h3>
-        <p>How to sell</p>
-        <p>Seller Terms</p>
+        <h5>Contact us</h5>
+        <p><i class="fa-solid fa-envelope">customerservice@jewelrybids.com</i></p>
+        <p>Fast response guaranteed</p>
+      </section>
+        <hr></hr>
+        <p class="under-footer"> Jewelry Bids &#169; All rights reserved 2023 </p>
       </div>
     </footer>
   </body>

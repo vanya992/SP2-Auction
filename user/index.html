@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jewelry Bids | Log in</title>
     <link rel="stylesheet" href="../dist/css/index.css" />
+    <link rel="stylesheet" href="../css/index.css">
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -22,7 +23,7 @@
       src="https://kit.fontawesome.com/f55b09a11a.js"
       crossorigin="anonymous"
     ></script>
-    <script defer type="module" src="../js/listings.js"></script>
+    <script defer type="module" src="../js/login.js"></script>
     <script defer src="../js/nav.js"></script>
   </head>
   <body class="d-flex flex-column vh-100">
@@ -45,20 +46,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link active"
-                href="index.
-  html"
+              <a class="nav-link"
+                href="../listings/index.html"
                 >Listings</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="createListing" href="./createBid.html">Create listing</a>
+              <a class="nav-link" id="createListing" href="../listings/createBid.html">Create listing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="logIn" href="../user/login.html">Log In</a>
+              <a class="nav-link active" id="logIn" href="./login.html">Log In</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="register" href="../user/register.html">Register</a>
+              <a class="nav-link" id="register" href="./register.html">Register</a>
             </li>
             </li>
             <li class="nav-item">
@@ -83,9 +83,7 @@
       </nav>
     </header>
     <main>
-      <div class="container-fluid">
-        <div class="listings row"></div>
-      </div>
+      
     </main>
     <footer class="mt-auto">
       <section>
@@ -107,10 +105,8 @@
         <p><i class="fa-solid fa-envelope">customerservice@jewelrybids.com</i></p>
         <p>Fast response guaranteed</p>
       </section>
-      <section >
         <hr></hr>
         <p class="under-footer"> Jewelry Bids &#169; All rights reserved 2023 </p>
-      </section>
       </div>
     </footer>
   </body>
