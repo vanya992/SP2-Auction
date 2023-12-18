@@ -18,6 +18,8 @@ async function login(profile) {
       console.log(user);
       localStorage.setItem("token", accessToken);
       localStorage.setItem("name", user.name);
+      localStorage.setItem("avatar", user.avatar);
+      localStorage.setItem("credit", user.credits);
       localStorage.setItem("profile", JSON.stringify(user));
       window.location.href = "../index.html";
       alert("You are now logged in!");

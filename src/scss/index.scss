@@ -136,6 +136,33 @@ footer div {
     margin-left: 20px;
 }
 
+.profile-avatar {
+    width:200px;
+    height: auto;
+}
+
+.listing-image {
+    width: 200px;
+    height: auto;
+}
+
+.card {
+    width: 200px;
+    height: 450px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+#singleListing {
+    display: flex;
+    flex-direction: column;
+    border: #2D403E;
+    border-radius: 20px;
+}
 
 @media screen and (max-width: 550px) {
     .carousel img {
