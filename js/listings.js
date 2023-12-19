@@ -53,7 +53,7 @@ async function getListings() {
 
       if (endTime > now) {
         const bids = document.createElement("div");
-        bids.className = "card h-100 m-2";
+        bids.className = "listings-card";
 
         const imageSrc =
           Array.isArray(listing.media) && listing.media.length > 0
@@ -64,7 +64,7 @@ async function getListings() {
 
         const timeRemaining = updateListingEndTime(listing.endsAt);
 
-        bids.innerHTML = `<img src="${imageSrc}" class="card-img-top thumbnail" alt="Listing image">
+        bids.innerHTML = `<img src="${imageSrc}" class="listing-image" alt="Listing image">
                             <div class="card-body">
                               <h5 class="card-title">${trimmedTitle}</h5>
                               <p class="card-text">${trimmedDescription}</p>
