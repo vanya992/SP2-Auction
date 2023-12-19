@@ -11923,13 +11923,27 @@ label, p, li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 50px;
 }
 
+
 .diamonds {
-  height: auto;
+  background-image: url("../images/diamonds.jpg"); /* Adjust path as needed */
+  height: 700px; /* Set a specific height */
   width: 100%;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
 }
+
+.diamonds h1 {
+  position: absolute;
+  color: white;
+  margin-top: 100px;
+  margin-left: 20px;
+}
+
 
 footer {
   display: flex;
@@ -11968,6 +11982,7 @@ footer div {
 
 .carousel {
   overflow: auto;
+  margin-left: 50px;
 }
 
 .wrapper i {
@@ -11983,6 +11998,13 @@ footer div {
   border-radius: 50%;
 }
 
+.fa-angle-left {
+  left: 15px;}
+
+  .fa-angle-left { 
+    position: relative; 
+    z-index: 10; }
+
 .wrapper i:first-child {
   left: 15px;
   z-index: 1;
@@ -11993,11 +12015,11 @@ footer div {
 }
 
 .carousel img {
-  height: 240px;
+  width: 200px;
   object-fit: cover;
-  width: 50%;
-  display: inline-block;
-  margin-left: 10px;
+  margin: 10px;
+  border: solid;
+  
 }
 
 .carousel img:first-child {
@@ -12129,6 +12151,32 @@ footer div {
 }
 
 
+#userProfileDisplay {
+  position: absolute; 
+  top: 50px; 
+  right: 10px; 
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px; /* adjust as needed */
+  height: 40px; /* adjust as needed */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name, .user-credit {
+  margin: 0;
+  font-weight: bold;
+}
+
+
 @media screen and (max-width: 550px) {
   .carousel img {
     width: 100%;
@@ -12141,7 +12189,7 @@ footer div {
     justify-content: space-around;
   }
   .carousel img {
-    width: 33.3333333333%;
+    width: calc(33.333% - 10px);
   }
   .logo-footer {
     display: block;
@@ -12150,7 +12198,7 @@ footer div {
 @media screen and (min-width: 1200px) {
   .carousel img {
     height: 340px;
-    width: 25%;
+    width: calc(20% - 10px);
   }
 }
 
