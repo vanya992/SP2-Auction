@@ -7,17 +7,43 @@ const carousels = document.querySelectorAll(".carousel");
 
 const defaultCardWidth = 200;
 
+function getCardWidth(carousel) {
+  const screenWidth = window.innerWidth;
+  if (screenWidth >= 1024) { // Desktop
+    return carousel.offsetWidth / 5;
+  } else if (screenWidth >= 768) { // Tablet
+    return carousel.offsetWidth / 3;
+  } else { // Mobile
+    return carousel.offsetWidth; // Full width for one image
+  }
+}
+
+
+
 carousels.forEach((carousel) => {
   const arrowLeft = carousel.parentElement.querySelector(".fa-angle-left");
   const arrowRight = carousel.parentElement.querySelector(".fa-angle-right");
 
   arrowLeft.addEventListener("click", () => {
-    carousel.scrollLeft -= defaultCardWidth;
+    carousel.scrollLeft -= getCardWidth(carousel);
+
+    if (carousel.scrollLeft === 0) {
+      carousel.scrollLeft = carousel.scrollWidth; 
+    }
+    carousel.scrollLeft -= getCardWidth(carousel);
   });
 
   arrowRight.addEventListener("click", () => {
-    carousel.scrollLeft += defaultCardWidth;
+    carousel.scrollLeft += getCardWidth(carousel);
+    
+    setTimeout(() => { 
+    if (carousel.scrollLeft >= (carousel.scrollWidth - carousel.offsetWidth)) {
+      carousel.scrollLeft = 0; 
+    }
+  }, 200); 
   });
+
+  
 
   let isDragStart = false,
     prevPageX,
@@ -57,6 +83,7 @@ async function fetchData(url) {
     console.error("Error fetching data: ", error);
   }
 }
+
 
 function renderCarouselItems(data, carousel) {
   data.forEach((item) => {
