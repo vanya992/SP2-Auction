@@ -11,12 +11,35 @@ carousels.forEach((carousel) => {
   const arrowLeft = carousel.parentElement.querySelector(".fa-angle-left");
   const arrowRight = carousel.parentElement.querySelector(".fa-angle-right");
 
+  function getCardWidth(carousel) {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 1024) {
+      return carousel.offsetWidth / 5;
+    } else if (screenWidth >= 768) {
+      return carousel.offsetWidth / 3;
+    } else {
+      return carousel.offsetWidth;
+    }
+  }
+
   arrowLeft.addEventListener("click", () => {
-    carousel.scrollLeft -= defaultCardWidth;
+    if (carousel.scrollLeft === 0) {
+      carousel.scrollLeft = carousel.scrollWidth;
+      setTimeout(() => {
+        carousel.scrollLeft -= getCardWidth(carousel);
+      }, 10);
+    } else {
+      carousel.scrollLeft -= getCardWidth(carousel);
+    }
   });
 
   arrowRight.addEventListener("click", () => {
-    carousel.scrollLeft += defaultCardWidth;
+    carousel.scrollLeft += getCardWidth(carousel);
+    setTimeout(() => {
+      if (carousel.scrollLeft >= carousel.scrollWidth - carousel.offsetWidth) {
+        carousel.scrollLeft = 0;
+      }
+    }, 200);
   });
 
   let isDragStart = false,
