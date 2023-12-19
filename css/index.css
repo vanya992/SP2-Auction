@@ -11904,7 +11904,6 @@ label, p, li {
   background-image: url("../../images/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll;
   min-height: 100vh;
   background-position: center center;
 }
@@ -11919,17 +11918,28 @@ label, p, li {
 }
 
 .card-body {
-  background-color: #D9d08f;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+ flex: 1;
+ padding: 15px;
 }
 
 .diamonds {
-  height: auto;
+  background-image: url('../images/diamonds.jpg');
+  height: 600px; 
   width: 100%;
+  position: relative;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
+
+.diamonds h1 {
+  position: absolute;
+  top: 100px;  
+  margin-left: 20px;
+  color: white; 
+}
+
+
 
 footer {
   display: flex;
@@ -11952,6 +11962,7 @@ footer div {
 }
 
 .wrapper {
+  
   max-width: 1200px;
   position: relative;
   justify-content: center;
@@ -11971,6 +11982,7 @@ footer div {
 }
 
 .wrapper i {
+  
   top: 100px;
   background: #2d403e;
   height: 30px;
@@ -11991,6 +12003,9 @@ footer div {
 .wrapper i:last-child {
   right: 15px;
 }
+.carouse {
+  width: auto;
+}
 
 .carousel img {
   height: 240px;
@@ -12001,7 +12016,7 @@ footer div {
 }
 
 .carousel img:first-child {
-  margin-left: 20px;
+  margin-left: 60px;
 }
 
 .profile-avatar {
@@ -12009,21 +12024,27 @@ footer div {
   height: auto;
 }
 
+.listings-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align items from start to end */
+  min-height: 450px;
+  margin: 10px;
+}
+
 .listing-image {
-  width: 200px;
+  width: 50px;
   height: auto;
 }
 
-.card {
-  width: 200px;
-  height: 450px;
+.profile-listing-card {
+ display: grid;
+ grid-column: repeat(auto-fill);
+ margin: 20px;
+
 }
 
-.error-message {
-  color: red;
-  font-size: 0.8em;
-  margin-top: 5px;
-}
+
 
 #singleListing {
   display: flex;
@@ -12068,10 +12089,11 @@ footer div {
 }
 
 #button {
-  margin: auto;
-  padding: 20px;
-  align-items: center;
+  margin-top: auto;
+  padding: 5px;
+  align-self: center;
 }
+
 
 .successMessage {
   background: green;
@@ -12085,6 +12107,10 @@ footer div {
   color: white;
 }
 
+
+/* Image slide if more than one */
+
+
 .image-slider {
   display: flex;
   overflow-x: auto;
@@ -12097,6 +12123,7 @@ footer div {
   scroll-snap-align: start;
   margin-right: 10px;
 }
+
 
 
 
@@ -12141,7 +12168,7 @@ footer div {
     justify-content: space-around;
   }
   .carousel img {
-    width: 33.3333333333%;
+    width: 33.333%;
   }
   .logo-footer {
     display: block;
@@ -12149,8 +12176,11 @@ footer div {
 }
 @media screen and (min-width: 1200px) {
   .carousel img {
-    height: 340px;
-    width: 25%;
+    width: 20%;
+  }
+
+  .wrapper {
+   margin-left: 250px;
   }
 }
 
