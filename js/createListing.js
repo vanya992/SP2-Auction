@@ -1,6 +1,7 @@
 const LISTINGS = "https://api.noroff.dev/api/v1/auction/listings";
 import { logOutButton } from "./logOut.js";
-
+import { isValidUrl } from "./validation.js";
+import { displayErrorMessage } from "./displayErrorMessage.js";
 logOutButton();
 
 const token = localStorage.getItem("token");
@@ -39,6 +40,24 @@ export async function createListing(token, listingData) {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("addMoreMedia")
+    .addEventListener("click", function () {
+      console.log("Add more clicked");
+      const container = document.getElementById("mediaInputsContainer");
+
+      const newInput = document.createElement("input");
+      newInput.type = "url";
+      newInput.name = "image";
+      newInput.placeholder = "Add an image of your bidding item";
+      newInput.className = "mb-2";
+
+      console.log("Adding new input field");
+      container.appendChild(newInput);
+    });
+});
+
 document
   .getElementById("listingForm")
   .addEventListener("submit", async (event) => {
@@ -52,7 +71,33 @@ document
 
     const tags = tagsInput.split(/[\s,]+/).filter((tag) => tag.trim() !== "");
 
-    const media = mediaPost ? [mediaPost] : [];
+    let isValid = true;
+    const mediaInputs = document.querySelectorAll(
+      "#mediaInputsContainer input"
+    );
+    const media = Array.from(mediaInputs)
+      .map((input) => {
+        if (!isValidUrl(input.value)) {
+          isValid = false;
+          input.style.borderColor = "red";
+          displayErrorMessage(input, "Image URL is not valid.");
+        } else {
+          input.style.borderColor = "";
+          if (
+            input.nextElementSibling &&
+            input.nextElementSibling.classList.contains("error-message")
+          ) {
+            input.nextElementSibling.style.display = "none";
+          }
+        }
+        return input.value;
+      })
+      .filter((url) => url);
+
+    if (!isValid) {
+      alert("Please enter valid media URLs");
+      return;
+    }
 
     try {
       const newListing = await createListing(token, {
@@ -65,7 +110,7 @@ document
 
       document.getElementById("title").value = "";
       document.getElementById("end").value = "";
-      document.getElementById("media").value = "";
+      document.querySelectorAll("#media").value = "";
       document.getElementById("tag").value = "";
       document.getElementById("description").value = "";
     } catch (error) {

@@ -6,6 +6,7 @@
     <title>Jewelry Bids | Create Listing</title>
     <link rel="stylesheet" href="../dist/css/index.css" />
     <link rel="stylesheet" href="../css/index.css" />
+    <link rel="icon" href="data:;base64,=" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -24,7 +25,9 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="../js/nav.js"></script>
-    <script defer type="module" src="../js/createListing.js"></script>
+    <script defer type="module" src="../js/bid.js"></script>
+    <script defer type="module" src="../js/listing.js"></script>
+    
   </head>
   <body class="d-flex flex-column vh-100">
     <header class="sticky-top navigation">
@@ -52,13 +55,13 @@
               <a class="nav-link active" id="createListing">Create Listing</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                id="profile"
-                href="../user/index.html"
-                >Profile</a
-              >
-            </li>
+                <a
+                  class="nav-link"
+                  id="profile"
+                  href="../user/index.html"
+                  >Profile</a
+                >
+              </li>
             <li class="nav-item">
               <a class="nav-link" id="logIn">Log In</a>
             </li>
@@ -87,49 +90,12 @@
       </nav>
     </header>
     <main>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-5">
-            <form class="form-control d-flex flex-column p-4 m-5" id="listingForm">
-              <h1 class="text-center">Create a listing</h1>
-              <label for="title">Title</label>
-              <input
-                type="text"
-                name="title"
-                id="title"
-                placeholder="Title"
-                class="mb-2"
-                required
-              />
-              <label for="end">Auctions end date</label>
-              <input
-                type="date"
-                id="end"
-                name="end"
-                min="2023-12-01"
-                max="2024-12-31"
-                class="mb-2" required
-              />
-              <label for="media">Media</label>
-              <div id="mediaInputsContainer">
-                <input
-                  type="url"
-                  id="media"
-                  name="image"
-                  placeholder="Add an image of your bidding item"
-                  class="mb-2" multiple
-                />
-                <button type="button" id="addMoreMedia">Add more</button>
-              </div>
-              <label for="tag">Tags</label>
-              <input type="tag" id="tag" name="tag" data-role="taginput" placeholder="Tag">
-              <label>Description</label>
-              <textarea placeholder="Say something about your item" id="description"></textarea>
-              <button class="btn btn-outline-success m-2">Post item</button>
-            </form>
-          </div>
-        </div>
-      </div>
+        <section>
+            <div id="singleListing">
+              <div id="bidMessage"></div>
+
+            </div>
+        </section>
     </main>
     <footer class="mt-auto">
       <section>

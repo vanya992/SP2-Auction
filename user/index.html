@@ -25,6 +25,7 @@
     ></script>
     <script defer type="module" src="../js/login.js"></script>
     <script defer src="../js/nav.js"></script>
+    <script defer type="module" src="../js/usersProfile.js"></script>
   </head>
   <body class="d-flex flex-column vh-100">
     <header class="sticky-top">
@@ -55,6 +56,14 @@
               <a class="nav-link" id="createListing" href="../listings/createBid.html">Create listing</a>
             </li>
             <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="profile"
+                  href="./index.html"
+                  >Profile</a
+                >
+              </li>
+            <li class="nav-item">
               <a class="nav-link active" id="logIn" href="./login.html">Log In</a>
             </li>
             <li class="nav-item">
@@ -83,7 +92,11 @@
       </nav>
     </header>
     <main>
-      
+      <section>
+        <div id="user"></div>
+        <div id="userBids"></div>
+        <div id="userHistory"></div>
+      </section>
     </main>
     <footer class="mt-auto">
       <section>

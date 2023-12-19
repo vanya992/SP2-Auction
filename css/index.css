@@ -11884,6 +11884,10 @@ body {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
 header {
   position: fixed;
 }
@@ -11900,7 +11904,7 @@ label, p, li {
   background-image: url("../../images/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   min-height: 100vh;
   background-position: center center;
 }
@@ -11999,6 +12003,131 @@ footer div {
 .carousel img:first-child {
   margin-left: 20px;
 }
+
+.profile-avatar {
+  width: 200px;
+  height: auto;
+}
+
+.listing-image {
+  width: 200px;
+  height: auto;
+}
+
+.card {
+  width: 200px;
+  height: 450px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+#singleListing {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.listing {
+  border-style: solid;
+  background-color: #087990;
+  margin: 20px;
+  padding: 20px;
+}
+
+.listing div {
+  display: flex;
+  flex-direction: row;
+
+}
+
+#singleListing div {
+  display: flex;
+  flex-direction: column;
+}
+
+#singleListing img {
+  margin: auto;
+}
+
+.slide {
+  width: 450px; 
+  height: 300px; 
+  overflow: hidden; 
+}
+
+.listing-image {
+  width: 100%;
+  height: auto;
+  display: block; 
+  object-fit: contain;
+  object-position: center;
+}
+
+#button {
+  margin: auto;
+  padding: 20px;
+  align-items: center;
+}
+
+.successMessage {
+  background: green;
+  border-radius: 10%;
+  color: white;
+}
+
+.errorMessage {
+  background: red;
+  border-radius: 10%;
+  color: white;
+}
+
+.image-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; 
+  position: relative;
+}
+
+.image-slider img {
+  max-width: 100%;
+  scroll-snap-align: start;
+  margin-right: 10px;
+}
+
+
+
+#myCustomSlider .slide {
+  display: none;
+}
+
+#myCustomSlider .slide.active {
+  display: block;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
 
 @media screen and (max-width: 550px) {
   .carousel img {
