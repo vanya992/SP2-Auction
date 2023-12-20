@@ -50,7 +50,7 @@ async function getListings(searchQuery = "") {
     listingsElement.innerHTML = "";
 
     if (data.length === 0) {
-      listingsElement.innerHTML = "<p>No listings found.</p>"; // Display a message if no listings are found
+      listingsElement.innerHTML = "<p>No listings found.</p>"; 
     } else {
       const listingsElement = document.querySelector(".listings");
       listingsElement.innerHTML = "";
@@ -67,17 +67,11 @@ async function getListings(searchQuery = "") {
         const maxTitleLength = 20;
         const maxDescriptionLength = 20;
 
-<<<<<<< HEAD
-      if (endTime > now) {
-        const bids = document.createElement("div");
-        bids.className = "listings-card";
-=======
         const trimmedTitle = trimText(listing.title, maxTitleLength);
         const trimmedDescription = trimText(
           listing.description,
           maxDescriptionLength
         );
->>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
 
         if (endTime > now) {
           const bids = document.createElement("div");
@@ -90,11 +84,7 @@ async function getListings(searchQuery = "") {
 
           const timeRemaining = updateListingEndTime(listing.endsAt);
 
-<<<<<<< HEAD
         bids.innerHTML = `<img src="${imageSrc}" class="listing-image" alt="Listing image">
-=======
-          bids.innerHTML = `<img src="${imageSrc}" class="listing-image" alt="Listing image">
->>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
                             <div class="card-body">
                               <h5 class="card-title">${trimmedTitle}</h5>
                               <p class="card-text">${trimmedDescription}</p>

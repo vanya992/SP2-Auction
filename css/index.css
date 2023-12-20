@@ -11918,43 +11918,18 @@ label, p, li {
 }
 
 .card-body {
-<<<<<<< HEAD
  flex: 1;
  padding: 15px;
-=======
-  background-color: #D9d08f;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 50px;
->>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
 }
 
 
 .diamonds {
-<<<<<<< HEAD
   background-image: url('../images/diamonds.jpg');
   height: 600px; 
-=======
-  background-image: url("../images/diamonds.jpg"); 
-  height: 700px; 
->>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
   width: 100%;
   position: relative;
   background-attachment: fixed;
   background-size: cover;
-<<<<<<< HEAD
-  background-position: center;
-}
-
-.diamonds h1 {
-  position: absolute;
-  top: 100px;  
-  margin-left: 20px;
-  color: white; 
-}
-
-=======
   background-position: bottom;
   position: relative;
 }
@@ -11962,10 +11937,9 @@ label, p, li {
 .diamonds h1 {
   position: absolute;
   color: white;
-  margin-top: 100px;
+  top: 100px;
   margin-left: 20px;
 }
->>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
 
 
 footer {
@@ -12038,12 +12012,13 @@ footer div {
 .wrapper i:last-child {
   right: 15px;
 }
-.carouse {
+.carousel {
   width: auto;
 }
 
 .carousel img {
   width: 200px;
+  height: 150px;
   object-fit: cover;
   margin: 10px;
   border: solid;

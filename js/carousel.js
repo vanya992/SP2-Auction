@@ -9,12 +9,12 @@ const defaultCardWidth = 200;
 
 function getCardWidth(carousel) {
   const screenWidth = window.innerWidth;
-  if (screenWidth >= 1024) { // Desktop
+  if (screenWidth >= 1024) { 
     return carousel.offsetWidth / 5;
-  } else if (screenWidth >= 768) { // Tablet
+  } else if (screenWidth >= 768) { 
     return carousel.offsetWidth / 3;
-  } else { // Mobile
-    return carousel.offsetWidth; // Full width for one image
+  } else { 
+    return carousel.offsetWidth; 
   }
 }
 
@@ -36,14 +36,6 @@ carousels.forEach((carousel) => {
   }
 
   arrowLeft.addEventListener("click", () => {
-<<<<<<< HEAD
-    carousel.scrollLeft -= getCardWidth(carousel);
-
-    if (carousel.scrollLeft === 0) {
-      carousel.scrollLeft = carousel.scrollWidth; 
-    }
-    carousel.scrollLeft -= getCardWidth(carousel);
-=======
     if (carousel.scrollLeft === 0) {
       carousel.scrollLeft = carousel.scrollWidth;
       setTimeout(() => {
@@ -52,25 +44,16 @@ carousels.forEach((carousel) => {
     } else {
       carousel.scrollLeft -= getCardWidth(carousel);
     }
->>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
   });
 
   arrowRight.addEventListener("click", () => {
     carousel.scrollLeft += getCardWidth(carousel);
-<<<<<<< HEAD
-    
-    setTimeout(() => { 
-    if (carousel.scrollLeft >= (carousel.scrollWidth - carousel.offsetWidth)) {
-      carousel.scrollLeft = 0; 
-    }
-  }, 200); 
-=======
+
     setTimeout(() => {
       if (carousel.scrollLeft >= carousel.scrollWidth - carousel.offsetWidth) {
         carousel.scrollLeft = 0;
       }
     }, 200);
->>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
   });
 
   
