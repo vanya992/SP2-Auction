@@ -11918,17 +11918,32 @@ label, p, li {
 }
 
 .card-body {
+<<<<<<< HEAD
  flex: 1;
  padding: 15px;
+=======
+  background-color: #D9d08f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 50px;
+>>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
 }
 
+
 .diamonds {
+<<<<<<< HEAD
   background-image: url('../images/diamonds.jpg');
   height: 600px; 
+=======
+  background-image: url("../images/diamonds.jpg"); 
+  height: 700px; 
+>>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
   width: 100%;
   position: relative;
   background-attachment: fixed;
   background-size: cover;
+<<<<<<< HEAD
   background-position: center;
 }
 
@@ -11939,6 +11954,18 @@ label, p, li {
   color: white; 
 }
 
+=======
+  background-position: bottom;
+  position: relative;
+}
+
+.diamonds h1 {
+  position: absolute;
+  color: white;
+  margin-top: 100px;
+  margin-left: 20px;
+}
+>>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
 
 
 footer {
@@ -11979,6 +12006,7 @@ footer div {
 
 .carousel {
   overflow: auto;
+  margin-left: 50px;
 }
 
 .wrapper i {
@@ -11995,6 +12023,13 @@ footer div {
   border-radius: 50%;
 }
 
+.fa-angle-left {
+  left: 15px;}
+
+  .fa-angle-left { 
+    position: relative; 
+    z-index: 10; }
+
 .wrapper i:first-child {
   left: 15px;
   z-index: 1;
@@ -12008,11 +12043,11 @@ footer div {
 }
 
 .carousel img {
-  height: 240px;
+  width: 200px;
   object-fit: cover;
-  width: 50%;
-  display: inline-block;
-  margin-left: 10px;
+  margin: 10px;
+  border: solid;
+  
 }
 
 .carousel img:first-child {
@@ -12027,7 +12062,7 @@ footer div {
 .listings-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Align items from start to end */
+  justify-content: space-between; 
   min-height: 450px;
   margin: 10px;
 }
@@ -12156,6 +12191,32 @@ footer div {
 }
 
 
+#userProfileDisplay {
+  position: absolute; 
+  top: 50px; 
+  right: 10px; 
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px; 
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name, .user-credit {
+  margin: 0;
+  font-weight: bold;
+}
+
+
 @media screen and (max-width: 550px) {
   .carousel img {
     width: 100%;
@@ -12168,7 +12229,11 @@ footer div {
     justify-content: space-around;
   }
   .carousel img {
+<<<<<<< HEAD
     width: 33.333%;
+=======
+    width: calc(33.333% - 10px);
+>>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
   }
   .logo-footer {
     display: block;
@@ -12176,11 +12241,16 @@ footer div {
 }
 @media screen and (min-width: 1200px) {
   .carousel img {
+<<<<<<< HEAD
     width: 20%;
   }
 
   .wrapper {
    margin-left: 250px;
+=======
+    height: 340px;
+    width: calc(20% - 10px);
+>>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
   }
 }
 
