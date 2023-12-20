@@ -12204,11 +12204,7 @@ footer div {
     justify-content: space-around;
   }
   .carousel img {
-<<<<<<< HEAD
-    width: 33.333%;
-=======
     width: calc(33.333% - 10px);
->>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
   }
   .logo-footer {
     display: block;
@@ -12216,16 +12212,8 @@ footer div {
 }
 @media screen and (min-width: 1200px) {
   .carousel img {
-<<<<<<< HEAD
-    width: 20%;
-  }
-
-  .wrapper {
-   margin-left: 250px;
-=======
     height: 340px;
     width: calc(20% - 10px);
->>>>>>> 24364af9a06a85495b6ea29493a0eb53e6618e38
   }
 }
 
