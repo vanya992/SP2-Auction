@@ -1,7 +1,8 @@
 const LISTINGS = "https://api.noroff.dev/api/v1/auction/listings";
 import { logOutButton } from "./logOut.js";
 import { isValidUrl } from "./validation.js";
-import { displayErrorMessage } from "./displayErrorMessage.js";
+import { displayMessage } from "./displayMessage.js";
+
 logOutButton();
 
 const token = localStorage.getItem("token");
@@ -25,17 +26,18 @@ export async function createListing(token, listingData) {
       body,
     });
 
+    const responseData = await response.json();
+    console.log("Response Data:", responseData);
+
     if (response.ok) {
       console.log("Your listing is successfully added.");
-      console.log(response.json);
-      return response.json();
+      return responseData;
     } else {
-      const errorResponse = await response.text();
-      console.error("Server response:", errorResponse);
+      console.error("Server response:", responseData);
       throw new Error("There has been an error. Please, try again.");
     }
   } catch (error) {
-    console.error("Error fetching listings:", error);
+    console.error("Error creating listing:", error);
     throw error;
   }
 }
@@ -80,9 +82,9 @@ document
         if (!isValidUrl(input.value)) {
           isValid = false;
           input.style.borderColor = "red";
-          displayErrorMessage(input, "Image URL is not valid.");
+          displayMessage(input, "Image URL is not valid.");
         } else {
-          input.style.borderColor = "";
+          input.style.borderColor = "green";
           if (
             input.nextElementSibling &&
             input.nextElementSibling.classList.contains("error-message")

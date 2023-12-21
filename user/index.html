@@ -78,10 +78,17 @@
       </nav>
     </header>
     <main>
-      <section>
-        <div id="user"></div>
-        <div id="userBids"></div>
+      <section id="userProfileSection">
+        <div id="user" class="user-profile"><div id="avatarUpdateSection">
+          <h3>Update Avatar</h3>
+          <form id="avatarUpdateForm">
+            <input type="text" id="newAvatarUrl" placeholder="Enter new avatar URL" required>
+            <button type="submit" class="btn btn-primary">Update Avatar</button>
+          </form>
+        </div></div>
+        <div id="userBids" class="user-listings"><h4>My listings</h4></div>
         <div id="userHistory"></div>
+        
       </section>
     </main>
     <footer class="mt-auto">

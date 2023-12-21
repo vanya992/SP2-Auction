@@ -26,6 +26,7 @@
     ></script>
     <script defer type="module" src="./js/carousel.js"></script>
     <script defer type="module" src="./js/nav.js"></script>
+    <script defer type="module" src="./js/userProfileDisplay.js"></script>
   </head>
   <body class="d-flex flex-column vh-100">
     <header class="sticky-top">
@@ -77,20 +78,11 @@
               <a class="nav-link" id="logOut">Log Out</a>
             </li>
           </ul>
-
-          <div class="d-md-block">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                <i class="fa-solid fa-magnifying-glass fa-shake"></i>
-              </button>
-            </form>
-          </div>
+          <div id="userProfileDisplay">
+            <div id="userNameDisplay" class="user-name"></div>
+            <div id="userAvatarDisplay" class="avatar" alt="User Avatar"></div>
+            <div id="userCreditDisplay" class="user-credit" ></div>
+        </div>
         </div>
       </nav>
     </header>
@@ -100,7 +92,7 @@
         Exclusive Bids
       </h1></div>
       <div>
-        <p>Newest auction items</p>
+        <h4>Newest auction items</h4>
         <div class="wrapper">
           <i id="left1" class="fa-solid fa-angle-left"></i>
           <div class="carousel carousel-1" id="carousel-1">
@@ -110,7 +102,7 @@
         </div>
       </div>
       <div>
-        <p>Soon expiring</p>
+        <h4>Last chance to bid</h4>
         <div class="wrapper">
           <i id="left2" class="fa-solid fa-angle-left"></i>
           <div class="carousel carousel-2" id="carousel-2">
@@ -119,7 +111,7 @@
           <i id="right2" class="fa-solid fa-angle-right"></i>
         </div>
       </div>
-      <p>Want to make your own auction? Sign in here</p>
+      <h4>Want to make your own auction? Sign in <a href="./user/login.html">here</a></h4>
       <h2>Explore our jewelry and find the best fit for you</h2>
     </main>
     <footer class="mt-auto">

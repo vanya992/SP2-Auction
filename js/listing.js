@@ -61,22 +61,51 @@ function displaySinglePost() {
           listing.bids && listing.bids.length > 0
             ? Math.max(...listing.bids.map((bid) => bid.amount))
             : 0;
+
+        let bidsHtml = "<p>No bids on this listing yet.</p>";
+        if (listing.bids && listing.bids.length > 0) {
+          const sortedBids = listing.bids.sort(
+            (a, b) => new Date(b.created) - new Date(a.created)
+          );
+          const lastThreeBids = sortedBids.slice(0, 3);
+          bidsHtml = `
+                <h3>Recent Bids</h3>
+                <div class="bids-container">
+                  ${lastThreeBids
+                    .map(
+                      (bid) => `
+                    <div class="bid">
+                      <span class="bidder-name">${bid.bidderName}</span>
+                      <span class="bid-amount">$${bid.amount}</span>
+                      <span class="bid-date">${new Date(
+                        bid.created
+                      ).toLocaleString()}</span>
+                    </div>
+                  `
+                    )
+                    .join("")}
+                </div>
+              `;
+        }
+
         listingContainer.innerHTML = `
         <div class="listing">
-        <div id="myCustomSlider" class="image-slider">
-          ${arrowsHtml}
-          ${imageSliderHtml}
+          <div id="myCustomSlider" class="image-slider">
+            ${arrowsHtml}
+            ${imageSliderHtml}
+          </div>
+          <div class="listing-details">
+            <h1>${listing.title}</h1>
+            <p>${listing.description}</p>
+            <p>Highest bid: ${highestBid}</p>
+            <p>Ends in: ${timeRemaining}</p>
+            <input type="number" id="bidAmount"><button class="btn btn-success" id="bidButton">Bid</button>
+            <div id="bidMessage"></div>
+            ${bidsHtml}
+          </div>
         </div>
-          <div>
-          <h1>${listing.title}</h1>
-          <p>${listing.description}</p>
-          <p>Highest bid: ${highestBid}</p>
-          <p>Ends in: ${timeRemaining}</p>
-          <input type="number" id="bidAmount"><button class="btn btn-success" id="bidButton">Bid</button><div id="bidMessage"></div>
-          <div><button class="btn btn-light delete-post" data-postId="${listing.id}">Delete Post</button>
-          <button class="btn btn-light edit-post" data-postId="${listing.id}">Edit Post</button></div>
-        </div>
-        `;
+      `;
+
         attachBidButtonEventListener(listingId, highestBid);
         attachArrowListeners();
       } else {
@@ -85,12 +114,10 @@ function displaySinglePost() {
     })
     .catch((error) => {
       console.error("Error fetching the specific post:", error);
-      // Handle error
     });
 }
 
 function attachBidButtonEventListener(listingId, highestBid) {
-  // Wait for the DOM changes to be applied
   setTimeout(() => {
     const bidButton = document.getElementById("bidButton");
     if (bidButton) {

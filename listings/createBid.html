@@ -25,6 +25,8 @@
     ></script>
     <script defer src="../js/nav.js"></script>
     <script defer type="module" src="../js/createListing.js"></script>
+    <script defer type="module" src="../js/userProfileDisplay.js"></script>
+
   </head>
   <body class="d-flex flex-column vh-100">
     <header class="sticky-top navigation">
@@ -69,22 +71,13 @@
               <a class="nav-link" id="logOut">Log Out</a>
             </li>
           </ul>
-
-          <div class="d-md-block">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                <i class="fa-solid fa-magnifying-glass fa-shake"></i>
-              </button>
-            </form>
-          </div>
         </div>
       </nav>
+      <div id="userProfileDisplay">
+        <div id="userNameDisplay" class="user-name"></div>
+        <div id="userAvatarDisplay" class="avatar" alt="User Avatar"></div>
+        <div id="userCreditDisplay" class="user-credit" ></div>
+    </div>
     </header>
     <main>
       <div class="container">

@@ -45,7 +45,6 @@ function displayProfileInfo(userData) {
 
 function fetchAndDisplayUserPosts(token, userName) {
   fetch(PROFILE + `/${userName}/listings`, {
-    // Adjust this line as per your API
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -54,18 +53,20 @@ function fetchAndDisplayUserPosts(token, userName) {
     .then((response) => response.json())
     .then((userPosts) => {
       const userListings = document.getElementById("userBids");
-      let listingsHtml = "<div><h3>My Listings</h3></div>";
+      let listingsHtml = "";
 
       userPosts.forEach((post) => {
-        const timeRemaining = updateListingEndTime(post.endsAt);
-        listingsHtml += `<div class="profile-listing-card">
-                             <img src="${post.media}" class="listing-image" alt="Listing image">
+        if (post.media && post.title && post.endsAt) {
+          const timeRemaining = updateListingEndTime(post.endsAt);
+          listingsHtml += `<div class="profile-listing-card">
+                             <img src="${post.media[0]}" class="listing-image" alt="Listing image"> 
                              <div class="card-body">
                                <h5 class="card-title">${post.title}</h5>
                                <p class="card-text mt-auto">Ends in: ${timeRemaining}</p>
-                               <a href="../listings/listing.html?id=${post.id}"><button class="btn btn-outline-success">Details</button>
+                               <a href="../listings/listing.html?id=${post.id}"><button class="btn btn-outline-success">Details</button></a>
                              </div>
                            </div>`;
+        }
       });
 
       userListings.innerHTML = listingsHtml;
@@ -74,5 +75,39 @@ function fetchAndDisplayUserPosts(token, userName) {
       console.error("Error fetching user posts:", error);
     });
 }
+
+function updateAvatar() {
+  const avatarForm = document.getElementById("avatarUpdateForm");
+  avatarForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const newAvatarUrl = document.getElementById("newAvatarUrl").value;
+    const userName = localStorage.getItem("name");
+    const token = localStorage.getItem("token");
+
+    fetch(PROFILE + `/${userName}/media`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ avatar: newAvatarUrl }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data && data.avatar === newAvatarUrl) {
+          alert("Avatar updated successfully!");
+          displayUserProfile();
+        } else {
+          alert("Failed to update avatar.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error updating avatar:", error);
+      });
+  });
+}
+
+updateAvatar();
 
 displayUserProfile();

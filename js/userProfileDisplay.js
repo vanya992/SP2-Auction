@@ -1,5 +1,3 @@
-// userProfileDisplay.js
-
 import { updateCredit } from "./userCredit.js";
 
 export function displayUserBasicInfo() {

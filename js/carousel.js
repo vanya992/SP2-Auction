@@ -9,16 +9,14 @@ const defaultCardWidth = 200;
 
 function getCardWidth(carousel) {
   const screenWidth = window.innerWidth;
-  if (screenWidth >= 1024) { 
+  if (screenWidth >= 1024) {
     return carousel.offsetWidth / 5;
-  } else if (screenWidth >= 768) { 
+  } else if (screenWidth >= 768) {
     return carousel.offsetWidth / 3;
-  } else { 
-    return carousel.offsetWidth; 
+  } else {
+    return carousel.offsetWidth;
   }
 }
-
-
 
 carousels.forEach((carousel) => {
   const arrowLeft = carousel.parentElement.querySelector(".fa-angle-left");
@@ -55,8 +53,6 @@ carousels.forEach((carousel) => {
       }
     }, 200);
   });
-
-  
 
   let isDragStart = false,
     prevPageX,
@@ -96,7 +92,6 @@ async function fetchData(url) {
     console.error("Error fetching data: ", error);
   }
 }
-
 
 function renderCarouselItems(data, carousel) {
   data.forEach((item) => {
