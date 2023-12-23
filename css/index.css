@@ -11921,6 +11921,7 @@ label, p, li {
 .logo {
   width: 100px;
   height: auto;
+  margin-left: 10px;
 }
 
 .logo-footer {
