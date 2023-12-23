@@ -11911,7 +11911,7 @@ label, p, li {
 }
 
 .background {
-  background-image: url("../../images/background.webp");
+  background-image: url("../images/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
