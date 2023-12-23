@@ -50,14 +50,14 @@ async function getListings(searchQuery = "") {
     listingsElement.innerHTML = "";
 
     if (data.length === 0) {
-      listingsElement.innerHTML = "<p>No listings found.</p>"; 
+      listingsElement.innerHTML = "<p>No listings found.</p>";
     } else {
       const listingsElement = document.querySelector(".listings");
       listingsElement.innerHTML = "";
 
       data.forEach((listing) => {
         const column = document.createElement("div");
-        column.className = "col-sm-6 col-md-4 col-lg-3 mb-4";
+        column.className = "col-12 col-sm-6 col-md-4 col-lg-3 mb-4";
 
         const postUrl = `./listing.html?id=${listing.id}?_bids=true&_seller=true&_active=true`;
 
@@ -75,8 +75,7 @@ async function getListings(searchQuery = "") {
 
         if (endTime > now) {
           const bids = document.createElement("div");
-          bids.className = "card h-100 mb-4";
-          bids.style = "width: 18rem;";
+          bids.className = "card h-100";
 
           const imageSrc =
             Array.isArray(listing.media) && listing.media.length > 0
@@ -85,7 +84,7 @@ async function getListings(searchQuery = "") {
 
           const timeRemaining = updateListingEndTime(listing.endsAt);
 
-        bids.innerHTML = `<img src="${imageSrc}" class="class="card-img-top"" alt="Listing image">
+          bids.innerHTML = `<img src="${imageSrc}" class="class="card-img-top"" alt="Listing image">
                             <div class="card-body d-flex flex-column">
                               <h5 class="card-title">${trimmedTitle}</h5>
                               <p class="card-text">${trimmedDescription}</p>
