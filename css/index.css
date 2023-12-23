@@ -11910,7 +11910,7 @@ label, p, li {
   background-image: url("../../images/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  background-attachment: fixed;
   background-position: center center;
 }
 
@@ -11971,42 +11971,55 @@ footer div {
 
 /* carousels */
 .wrapper {
-  
   max-width: 1200px;
+  margin: auto;
   position: relative;
-  justify-content: center;
-  object-fit: cover;
-  padding: 10px;
+  overflow: hidden;
 }
 
-.wrapper, .carousel {
-  font-size: 15px;
-  white-space: nowrap;
-  cursor: pointer;
-  scroll-behavior: smooth;
-}
+
 
 .carousel {
-  overflow: auto;
-  margin-left: 50px;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.card {
+  min-width: calc(100% / 4); 
+  flex-shrink: 0; 
+  position: relative; 
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover;
 }
 
 .wrapper i {
-  
-  top: 100px;
   background: #2d403e;
+  color: #fff;
   height: 30px;
   width: 30px;
-  cursor: pointer;
   position: absolute;
-  text-align: center;
-  color: #fff;
-  line-height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fa-angle-right {
+  left: 15px;
 }
 
 .fa-angle-left {
-  left: 15px;}
+  lleft: -15px; }
 
   .fa-angle-left { 
     position: relative; 

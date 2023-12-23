@@ -96,6 +96,7 @@ function displaySinglePost() {
           </div>
           <div class="listing-details">
             <h1>${listing.title}</h1>
+            <h3> Seller: ${listing.seller}</h3>
             <p>${listing.description}</p>
             <p>Highest bid: ${highestBid}</p>
             <p>Ends in: ${timeRemaining}</p>
