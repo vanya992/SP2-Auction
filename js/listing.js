@@ -49,6 +49,8 @@ function displaySinglePost() {
           )
           .join("");
 
+        const seller = listing.seller;
+
         const arrowsHtml =
           images.length > 1
             ? `<a class="prev">&#10094;</a>
@@ -68,6 +70,7 @@ function displaySinglePost() {
             (a, b) => new Date(b.created) - new Date(a.created)
           );
           const lastThreeBids = sortedBids.slice(0, 3);
+
           bidsHtml = `
                 <h3>Recent Bids</h3>
                 <div class="bids-container">
@@ -96,7 +99,7 @@ function displaySinglePost() {
           </div>
           <div class="listing-details">
             <h1>${listing.title}</h1>
-            <h3> Seller: ${listing.seller}</h3>
+            <h3> Seller: ${seller.name}</h3>
             <p>${listing.description}</p>
             <p>Highest bid: ${highestBid}</p>
             <p>Ends in: ${timeRemaining}</p>

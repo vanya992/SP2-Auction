@@ -12228,9 +12228,10 @@ h4 {
 
 /* single listing page */
 
-#singleListing {
-  margin-top: 20px;
+#singleListing, .listing-details {
+  margin: 20px; 
 }
+
 
 .listing {
   border-style: solid;
@@ -12289,16 +12290,30 @@ h4 {
   height: 300px;
   object-fit: cover;
 }
+.bid-input, #singleListing {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px;
+}
 
 .bid-input input {
-  width: 70%;
+  flex-grow: 1; 
   padding: 5px;
+  max-width: 500px; 
 }
 
 .bid-input button {
-margin-left: 5px;
-width: 25%;
+  padding: 5px 15px; 
+  max-width: 200px; 
 }
+
+.bid-input input {
+  border-radius: 5px; 
+  border: 1px solid;
+ }
+
+
 
 .slide {
   width: 450px; 
@@ -12368,6 +12383,7 @@ width: 25%;
 .form {
     width: 40%;
   }
+ 
 }
 
 /*# sourceMappingURL=index.css.map */
