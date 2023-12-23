@@ -4,10 +4,9 @@
 }
 
 
-.text-bg-primary {
-    color: #82752a;
-    background-color: RGBA(var(--bs-primary-rgb), var(--bs-bg-opacity, 1)) ;
-  }
+$btn-primary: #17756C;
+$btn-secondary: #0f4d46;
+
 
   .row {
     --bs-gutter-x: 0;

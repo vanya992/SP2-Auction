@@ -48,6 +48,8 @@ export async function placeBid(listingId, bidAmount) {
     messageElement.classList.remove = "errorMessage";
     if (messageElement) {
       messageElement.innerHTML = "<p>Bid placed successfully!</p>";
+      const bidAmountInput = document.getElementById("bidAmount");
+      if (bidAmountInput) bidAmountInput.value = "";
     }
     console.log("Bid successful:", responseBody);
   } catch (error) {

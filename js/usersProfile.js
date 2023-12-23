@@ -63,7 +63,7 @@ function fetchAndDisplayUserPosts(token, userName) {
                              <div class="card-body">
                                <h5 class="card-title">${post.title}</h5>
                                <p class="card-text mt-auto">Ends in: ${timeRemaining}</p>
-                               <a href="../listings/listing.html?id=${post.id}"><button class="btn btn-outline-success">Details</button></a>
+                               <a href="../listings/listing.html?id=${post.id}"><button class="btn btn-primary">Details</button></a>
                              </div>
                            </div>`;
         }

@@ -100,7 +100,7 @@ function displaySinglePost() {
             <p>${listing.description}</p>
             <p>Highest bid: ${highestBid}</p>
             <p>Ends in: ${timeRemaining}</p>
-            <section class="bid-input"><input type="number" id="bidAmount"><button class="btn btn-success" id="bidButton">Bid</button></section>
+            <section class="bid-input"><input type="number" id="bidAmount"><button class="btn btn-primary" id="bidButton">Bid</button></section>
             <div id="bidMessage"></div>
             ${bidsHtml}
           </div>

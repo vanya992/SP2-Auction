@@ -82,7 +82,6 @@
     <main class="background">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-5">
             <form class="form form-control d-flex flex-column p-4 m-5" id="listingForm">
               <h1 class="text-center">Create a listing</h1>
               <label for="title">Title</label>
@@ -112,15 +111,14 @@
                   placeholder="Add an image of your bidding item"
                   class="mb-2" multiple
                 />
-                <button type="button" id="addMoreMedia">Add more</button>
+                <button type="button" class="btn btn-primary" id="addMoreMedia">Add more</button>
               </div>
               <label for="tag">Tags</label>
               <input type="tag" id="tag" name="tag" data-role="taginput" placeholder="Tag">
               <label>Description</label>
               <textarea placeholder="Say something about your item" id="description"></textarea>
-              <button class="btn btn-outline-success m-2">Post item</button>
+              <button class="btn btn-primary m-2">Post item</button>
             </form>
-          </div>
         </div>
       </div>
     </main>
