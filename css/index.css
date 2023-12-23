@@ -11941,7 +11941,7 @@ label, p, li {
   position: relative;
   background-attachment: fixed;
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   position: relative;
 }
 
