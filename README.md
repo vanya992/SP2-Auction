@@ -1,5 +1,4 @@
-#Semester Project 2: Auction site / Prestige Auctions
-<img width="2239" alt="Screenshot 2023-12-24 at 17 47 25" src="https://github.com/vanya992/SP2-Auction/assets/111580069/b17d92de-711f-4268-8311-be2f616dd620">
+# Semester Project 2: Auction site / Prestige Auctions
 
 ##About this project:
 
