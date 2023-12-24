@@ -12268,12 +12268,15 @@ h4 {
 .btn-primary {
   background-color: var(--button-background);
   border: var(--background-green);
+  text-transform: uppercase;
 }
 
 .btn-primary:hover {
   background-color: var(--button-hover);
   border: var(--background-green);
 }
+
+
 
 /* single listing page */
 
