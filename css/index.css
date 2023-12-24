@@ -11993,13 +11993,12 @@ footer div {
 
 .card {
   flex: 0 0 calc(25% - 20px); 
-  margin: 10px;
   width: 100%;
 }
 
 
 .card img {
-  width: 100%;
+  width: 150px;
   height: 200px; 
   object-fit: cover;
 }
@@ -12045,7 +12044,7 @@ footer div {
 }
 
 .carousel img {
-  width: 100%;
+  width: 150px;
   height: 100px; 
   object-fit: cover;
 }
@@ -12064,9 +12063,9 @@ h4 {
 
 .form  {
   background-color: var(--background-transparent);
+  border: none;
   width: 80%;
-  margin: auto;
-  margin-top: 30px;
+  margin: 30px 0;
 }
 /* listings page */
 
@@ -12227,50 +12226,26 @@ h4 {
   margin-bottom: 20px;
 }
 
-/* single listing page */
-
-#singleListing, .listing-details {
-  margin: 20px; 
-}
-
-
-.listing {
-  border-style: solid;
-  background-color: var(--background-transparent);
-  margin: 20px;
-  padding: 20px;
-  color: white;
-}
-
-.listing-image {
-  width: 100%;
-  height: auto;
-  display: block; 
-  object-fit: cover;
-  object-position: center;
-}
-
-#button {
-  margin: auto;
-  padding: 7px;
-
-}
-
 .btn-primary {
   background-color: var(--button-background);
-  border-color: var(--background-green);
-  color: var(--text-light);
-  text-transform: uppercase;
-} 
+  border: var(--background-green);
+}
+
 .btn-primary:hover {
   background-color: var(--button-hover);
-  border-color: var(--background-green);
-} 
-
-.listing-image {
-  width: 100%;
-  min-height: 20vh;
+  border: var(--background-green);
 }
+
+/* single listing page */
+.listing {
+  border-radius: 10px;
+  background-color: var(--bs-white);
+  margin: 20px;
+  padding: 20px;
+  color: var(--text-dark);
+  object-fit: contain;
+}
+
 
 .card-body {
   flex: 1; 
@@ -12290,7 +12265,9 @@ h4 {
   width: 100%;
   height: 300px;
   object-fit: cover;
+  object-position: center;
 }
+
 .bid-input, #singleListing {
   display: flex;
   justify-content: center; 
@@ -12301,19 +12278,15 @@ h4 {
 .bid-input input {
   flex-grow: 1; 
   padding: 5px;
-  max-width: 500px; 
+  max-width: 500px;
+  border-radius: 5px; 
+  border: 1px solid; 
 }
 
 .bid-input button {
   padding: 5px 15px; 
   max-width: 200px; 
 }
-
-.bid-input input {
-  border-radius: 5px; 
-  border: 1px solid;
- }
-
 
 
 .slide {
@@ -12329,7 +12302,7 @@ h4 {
 }
 
 .bid {
-  background-color: #f2f2f2;
+  background-color: var(--background-transparent);
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 5px;
@@ -12337,23 +12310,26 @@ h4 {
 
 .bidder-name {
   font-weight: bold;
-  color: black;
+  color: var(--);
 }
 
 .bid-amount {
-  color: green;
+  color: var(--text-light);
 }
-
-.bid-date {
-  color: #666;
-  font-size: 0.9em;
-}
-
 
 
 @media screen and (max-width: 550px) {
   .carousel img {
     width: 100%;
+  }
+
+  .carousel img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .listing {
+    max-width: 90%;
   }
 }
 @media screen and (min-width: 901px) {
@@ -12366,21 +12342,13 @@ h4 {
   .form {
     width: 50%;
   }
-  .carousel img {
-   width: 100%;
-   height: 150px;
-   object-fit: cover;
-  }
+ 
   .logo-footer {
     display: block;
   }
 }
 @media screen and (min-width: 1200px) {
-  .carousel img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
+
 .form {
     width: 40%;
   }

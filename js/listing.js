@@ -36,16 +36,19 @@ function displaySinglePost() {
       const now = new Date();
 
       if (listing) {
-        const imageSrc =
-          listing.media.length > 0 ? listing.media[0] : "default-image-url.jpg";
-        const images =
-          listing.media.length > 0 ? listing.media : ["default-image-url.jpg"];
+        const images = Array.isArray(listing.media)
+          ? listing.media
+          : [
+              listing.media ||
+                "https://t4.ftcdn.net/jpg/04/00/24/31/360_F_400243185_BOxON3h9avMUX10RsDkt3pJ8iQx72kS3.jpg",
+            ];
+
         const imageSliderHtml = images
           .map(
             (src, index) =>
               `<div class="slide ${index === 0 ? "active" : ""}">
-               <img src="${src}" class="listing-image" alt="Listing Image">
-            </div>`
+                 <img src="${src}" class="listing-image" alt="Listing Image">
+              </div>`
           )
           .join("");
 
@@ -93,7 +96,7 @@ function displaySinglePost() {
 
         listingContainer.innerHTML = `
         <div class="listing">
-          <div id="myCustomSlider" class="image-slider">
+          <div id="myCustomSlider" class="image-slider card-img-top">
             ${arrowsHtml}
             ${imageSliderHtml}
           </div>

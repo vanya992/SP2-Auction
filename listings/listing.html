@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jewelry Bids | Create Listing</title>
+    <title>Prestige Auctions | Single Listing</title>
     <link rel="stylesheet" href="../dist/css/index.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="icon" href="data:;base64,=" />
@@ -33,7 +33,7 @@
   <body class="d-flex flex-column vh-100">
     <header class="sticky-top navigation">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div><a class="navbar-brand" href="../index.html"
+        <a class="navbar-brand" href="../index.html"
           ><img src="../images/justlogo.png" alt="logo" class="logo"
         /></a>
         <button
@@ -46,33 +46,45 @@
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
-        </button></div>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link" href="./index.html">Listings</a>
             </li>
             <li class="nav-item">
-              <a href="../createBid.html" class="nav-link active" id="createListing">Create Listing</a>
+              <a
+                class="nav-link"
+                id="createListing"
+                href="./createBid.html"
+                >Create listing</a
+              >
             </li>
             <li class="nav-item">
-                <a
-                  class="nav-link"
-                  id="profile"
-                  href="../user/index.html"
-                  >Profile</a
-                >
-              </li>
-            <li class="nav-item">
-              <a href="../user/login.html" class="nav-link" id="logIn">Log In</a>
+              <a
+                class="nav-link"
+                id="profile"
+                href="../user/index.html"
+                >Profile</a
+              >
             </li>
             <li class="nav-item">
-              <a href="../user/register.html" class="nav-link" id="register">Register</a>
+              <a class="nav-link" id="logIn" href="../user/login.html">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="register" href="../user/register.html"
+                >Register</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" id="logOut">Log Out</a>
             </li>
           </ul>
+          <div id="userProfileDisplay">
+            <div id="userNameDisplay" class="user-name"></div>
+            <div id="userAvatarDisplay" class="avatar" alt="User Avatar"></div>
+            <div id="userCreditDisplay" class="user-credit" ></div>
+        </div>
         </div>
       </nav>
       <div id="userProfileDisplay">
@@ -92,7 +104,7 @@
     <footer class="mt-auto">
       <section>
       <div>
-        <h5>Jewelry Bids</h5>
+        <h5>Prestige Auctions</h5>
         <p>
           Our customers trust is our most valuable asset, and we strive to
           maintain it by providing exceptional customer service and expert

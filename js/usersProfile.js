@@ -58,7 +58,7 @@ function fetchAndDisplayUserPosts(token, userName) {
       userPosts.forEach((post) => {
         if (post.media && post.title && post.endsAt) {
           const timeRemaining = updateListingEndTime(post.endsAt);
-          listingsHtml += `<div class="profile-listing-card">
+          listingsHtml += `<div class="card">
                              <img src="${post.media[0]}" class="listing-image" alt="Listing image"> 
                              <div class="card-body">
                                <h5 class="card-title">${post.title}</h5>

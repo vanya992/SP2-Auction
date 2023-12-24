@@ -84,11 +84,11 @@ async function getListings(searchQuery = "") {
 
           const timeRemaining = updateListingEndTime(listing.endsAt);
 
-          bids.innerHTML = `<img src="${imageSrc}" class="class="card-img-top"" alt="Listing image">
+          bids.innerHTML = `<img src="${imageSrc}" class="card-img-top" alt="Listing image">
                             <div class="card-body d-flex flex-column">
-                              <h5 class="card-title">${trimmedTitle}</h5>
-                              <p class="card-text">${trimmedDescription}</p>
-                              <p class="card-text mt-auto">Ends: ${timeRemaining}</p></div>
+                              <h5>${trimmedTitle}</h5>
+                              <p>${trimmedDescription}</p>
+                              <p class="mt-auto">Ends: ${timeRemaining}</p></div>
                               <a href="listing.html?id=${listing.id}"><button id="button" class="btn btn-primary mt-auto align-self-center">Details</button>
                             </a>`;
 
