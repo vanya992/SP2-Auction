@@ -38,9 +38,15 @@ function displayUserProfile() {
 function displayProfileInfo(userData) {
   const userProfile = document.getElementById("user");
 
-  userProfile.innerHTML = `<div><img src=${userData.avatar} class="profile-avatar"></img></div>
-                            <div><h5>${userData.name}</h5>
-                            <p>Credit: ${userData.credits}</p>`;
+  userProfile.innerHTML = `<section class="just-user"><div><img src=${userData.avatar} class="profile-avatar"></img></div>
+                            <div class="user-details"><h5>Name: ${userData.name}</h5>
+                            <h5>Credit: ${userData.credits}</h5>
+                            <div id="avatarUpdateSection">
+                            <h5>Update Avatar</h5>
+                            <form id="avatarUpdateForm">
+                            <input type="text" id="newAvatarUrl" placeholder="Enter new avatar URL" required>
+                            <button type="submit" class="btn btn-primary">Update Avatar</button>
+                            </form></div></section>`;
 }
 
 function fetchAndDisplayUserPosts(token, userName) {
@@ -107,6 +113,7 @@ function updateAvatar() {
       });
   });
 }
-
-updateAvatar();
-displayUserProfile();
+document.addEventListener("DOMContentLoaded", () => {
+  displayUserProfile();
+  updateAvatar();
+});

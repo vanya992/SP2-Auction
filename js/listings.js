@@ -59,7 +59,7 @@ async function getListings(searchQuery = "") {
         const column = document.createElement("div");
         column.className = "col-12 col-sm-6 col-md-4 col-lg-3 mb-4";
 
-        const postUrl = `./listing.html?id=${listing.id}?_bids=true&_seller=true&_active=true`;
+        const postUrl = `./listing.html?id=${listing.id}?&_bids=true&_seller=true&_active=true`;
 
         const endTime = new Date(listing.endsAt);
         const now = new Date();
