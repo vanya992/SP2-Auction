@@ -36,13 +36,13 @@ Project that I am delivering has checked all of the necessarities, and I had no 
 
 ## Setting Up and Running the JavaScript API Project Locally:
 
-## Make sure you have following: 
+### Make sure you have following: 
 
 ### 1. Node.js and npm:
      - Ensure that Node.js (which includes npm) is installed on your device.
          - You can download it from the official website: Node.js.
 
-Steps:
+## Steps:
 
 ### 1. Clone the Repository:
 
