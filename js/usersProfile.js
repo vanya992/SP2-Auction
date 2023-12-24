@@ -109,5 +109,4 @@ function updateAvatar() {
 }
 
 updateAvatar();
-
 displayUserProfile();

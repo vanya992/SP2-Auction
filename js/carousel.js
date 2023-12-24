@@ -5,8 +5,6 @@ logOutButton();
 
 const carousels = document.querySelectorAll(".carousel");
 
-const defaultCardWidth = 200;
-
 function getCardWidth(carousel) {
   const screenWidth = window.innerWidth;
   if (screenWidth >= 1024) {
@@ -108,13 +106,13 @@ function renderCarouselItems(data, carousel) {
 
 async function initializeCarousels() {
   const newestPostsData = await fetchData(
-    `${LISTINGS}?limit=8&sort=created&_bids=true&_active=true`
+    `${LISTINGS}?limit=20&sort=created&_bids=true&_active=true`
   );
   const newestPostsCarousel = document.querySelector("#carousel-1");
   renderCarouselItems(newestPostsData, newestPostsCarousel);
 
   const expiringPostsData = await fetchData(
-    `${LISTINGS}?limit=8&sort=endsAt&sortOrder=asc&_bids=true&_active=true`
+    `${LISTINGS}?limit=20&sort=endsAt&sortOrder=asc&_bids=true&_active=true`
   );
   const expiringPostsCarousel = document.querySelector("#carousel-2");
 

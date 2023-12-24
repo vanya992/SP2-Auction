@@ -66,8 +66,10 @@ function fetchUpdatedCredit() {
 
 function updateCreditDisplay(credit) {
   const userCreditElement = document.getElementById("userCreditDisplay");
-  if (userCreditElement) {
-    userCreditElement.textContent = `Credit: ${credit}`;
+  if (creditDisplay) {
+    creditDisplay.textContent = `${credit}`;
+  } else {
+    console.error("Credit display element not found");
   }
 }
 

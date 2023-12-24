@@ -12039,9 +12039,10 @@ footer div {
 }
 
 .carousel img {
-  width: 150px;
-  height: 100px; 
+  width: 250px;
+  height: 200px; 
   object-fit: cover;
+  border: solid var(--background-green);
 }
 
 
@@ -12324,13 +12325,11 @@ h4 {
 
 
 @media screen and (max-width: 550px) {
-  .carousel img {
-    width: 100%;
-  }
 
   .carousel img {
-    width: 10px;
+    width: 100px;
     height: 150px;
+    object-fit: cover;
   }
 
   .listing {
