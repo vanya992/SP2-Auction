@@ -11955,6 +11955,7 @@ label, p, li {
 
 
 footer {
+  font-family: "Ubuntu";
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11963,6 +11964,10 @@ footer {
   margin-top: auto;
   padding: 20px;
   position: sticky;
+}
+
+footer p {
+  font-family: "Ubuntu";
 }
 
 footer div {
