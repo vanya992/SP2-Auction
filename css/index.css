@@ -11898,6 +11898,12 @@ a {
   text-decoration: none;
   color: #fff;
 }
+.active {
+  border: solid 1px var(--background-green);
+  background-color: var(--background-transparent);
+}
+
+
 header {
   position: fixed;
 }
@@ -12396,6 +12402,13 @@ h4 {
     justify-content: space-around;
   }
 
+  .navbar-expand-md .navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  
   .form {
     width: 50%;
   }
