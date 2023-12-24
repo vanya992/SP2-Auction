@@ -11928,12 +11928,6 @@ label, p, li {
   display: none;
 }
 
-.card-body {
- flex: 1;
- padding: 15px;
-}
-
-
 .diamonds {
   background-image: url('../images/diamonds.jpg');
   height: 600px; 
@@ -11992,10 +11986,11 @@ footer div {
 }
 
 .card {
-  flex: 0 0 calc(25% - 20px); 
-  width: 100%;
+ display: flex;
+ flex-direction: column;
+ margin: auto;
+  justify-content: center;
 }
-
 
 .card img {
   width: 150px;
@@ -12241,9 +12236,19 @@ h4 {
   border-radius: 10px;
   background-color: var(--bs-white);
   margin: 20px;
-  padding: 20px;
+  margin-bottom: 20px;
+  border: var(--text-light);
   color: var(--text-dark);
-  object-fit: contain;
+  object-fit: cover;
+  margin: auto;
+}
+
+.listing-image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
 
@@ -12324,7 +12329,7 @@ h4 {
   }
 
   .carousel img {
-    width: 150px;
+    width: 10px;
     height: 150px;
   }
 
