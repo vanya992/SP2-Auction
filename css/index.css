@@ -12071,7 +12071,11 @@ h4 {
   object-fit: cover;
 }
  .listings {
-  padding: 10px;
+  flex-basis: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
  }
 
 .listings-card {
@@ -12212,15 +12216,7 @@ h4 {
   gap: 10px;
 }
 
-.profile-listing-card {
-  width: 300px;
-  height: 50vh;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  overflow: hidden;
-  margin: auto;
-  margin-bottom: 20px;
-}
+
 
 .btn-primary {
   background-color: var(--button-background);
@@ -12233,6 +12229,10 @@ h4 {
 }
 
 /* single listing page */
+
+#singleListing {
+  margin: 20px;
+}
 .listing {
   border-radius: 10px;
   background-color: var(--bs-white);
@@ -12252,6 +12252,9 @@ h4 {
   object-fit: cover;
 }
 
+.listing-details {
+  margin: 10px;
+}
 
 .card-body {
   flex: 1; 
