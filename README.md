@@ -1,6 +1,6 @@
 # Semester Project 2: Auction site / Prestige Auctions
 
-##About this project:
+## About this project:
 
 This is a school project that I have made, with API provided for the auction site. This should have been a thorough application of the knowledge we have gathered so far.
 
