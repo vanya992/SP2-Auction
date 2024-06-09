@@ -1,37 +1,9 @@
 # Semester Project 2: Auction site / Prestige Auctions
+<img width="2240" alt="Screenshot 2024-06-09 at 10 20 37" src="https://github.com/vanya992/SP2-Auction/assets/111580069/058b3f72-a91a-47ea-b35c-7acb992bd729">
 
 ## About this project:
 
 This is a school project that I have made, with API provided for the auction site. This should have been a thorough application of the knowledge we have gathered so far.
-
-Brief has stated which user stories we have to cover: 
-  - A user with a stud.noroff.no email may register
-  - A registered user may login
-  - A registered user may logout
-  - A registered user may update their avatar
-  - A registered user may view their total credit
-  - A registered user may create a Listing with a title, deadline date, media gallery and description  - 
-  - A registered user may add a Bid to another user’s Listing
-  - A registered user may view Bids made on a Listing
-  - An unregistered user may search through Listings
-
-To plan this project I have used Trello board, and I have upgraded my Trello account so that I can make Gantt chart from it, so here you can check on the plan:
-
-  - Trello board: https://trello.com/b/FOorfl2Y/auction-site
-
-Design was made in Figma. Here is the prototype that was my plan, and I think I did a good job sticking to it: https://www.figma.com/file/gLnXOfnI4RwqZnrzJw0P6B/Untitled?type=design&node-id=70%3A200&mode=design&t=R4cyOgcy2qxRBTa3-1
-
-I have made some crutial changes, when I realised that only I had idea with the jewelry, and no one else has been interested in posting it.
-
-In Canva I have made style guide: https://www.canva.com/design/DAF3xgHENKY/fgWLTVcc1KF1xDJKqD90jQ/view?utm_content=DAF3xgHENKY&utm_campaign=designshare&utm_medium=link&utm_source=editor
-
-When almost finished, site was hosted on Netlify platform, and here is the link to check it: https://prestigeauctions.netlify.app
-
-This was very chalenging project for me. I was in a fight with time to make the best practice out of it and to actually work, but I did the best I was able at the moment.
-
-As always, designing is my worst nightmare, but I think as time passes I am also getting a bit better in it.
-
-Project that I am delivering has checked all of the necessarities, and I had no time to do more, but I would be happy to come back to it when time comes to my side.
 
 
 ## Setting Up and Running the JavaScript API Project Locally:
